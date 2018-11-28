@@ -1,0 +1,205 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  min-width: 350px;
+  overflow: hidden;
+}
+
+.user-search {
+  width: 100%;
+  min-height: 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  min-width: 340px;
+}
+
+.user-search input {
+  margin: 5px;
+  padding: 5px;
+}
+
+.user-search input {
+  width: 50%;
+}
+
+.clips-row-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  min-width: 340px;
+  min-height: 440px;
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+}
+
+.clips-row, .clips-row.current {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  min-width: 340px;
+  min-height: 440px;
+  padding: 0 5px;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.prev {
+  left: -100%;
+  transition: all 0.5s;
+}
+
+.next {
+  left: 100%;
+  transition: all 0.5s;
+}
+
+.clips-item {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  min-width: 320px;
+  height: 420px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.clips-item:hover {
+  background-color: rgb(241, 240, 238);
+}
+
+.clip-image {
+  width: 320px;
+  height: 180px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  border: 1px solid black;
+}
+
+.clip-image__link {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+
+.clip-image__link a {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  padding: 10px 5px;
+  transition: all 0.3s;
+}
+
+.clip-image__link a:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.clip-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5px;
+}
+
+.clip-info div {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.clip-info i, .clip-info span {
+  margin: 3px;
+}
+
+.clip-info__author span {
+  text-align: right;
+}
+
+.clip-description {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0px;
+  max-height: 116.5px;
+  width: 100%;
+  overflow-wrap: break-word;
+  overflow: hidden;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  height: 30px;
+  position: relative;
+}
+
+.pagesCount {
+  position: absolute;
+  bottom: 28px;
+}
+
+.nav-dots {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: rgb(241, 240, 238);
+}
+
+.current-dot {
+  font-size: 0.75em;
+  text-align: center;
+  background-color: rgba(255, 0, 0, 0.6);
+}
+
+button {
+  cursor: pointer;
+}
